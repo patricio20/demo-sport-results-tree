@@ -1,0 +1,20 @@
+
+<br/>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usu of usuarios">
+      <th scope="row">{{ usu._id }}</th>
+      <td>{{ usu.nombres }}</td>
+      <td>{{ usu.apellidos }}</td>
+      <td>{{ usu.mail }}</td>
+    </tr>
+  </tbody>
+</table>
