@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TorneoService } from '../../services/torneo.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  torneo:any[] = [];
+
+  constructor( private _torneoService:TorneoService ) {
+      console.log("Constructor torneo");
+  }
+
 
   ngOnInit() {
+    console.log("ngOnInit torneo");
+    this.torneo = this._torneoService.getTorneo();
+    console.log(this.torneo);
   }
 
 }
